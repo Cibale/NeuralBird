@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="start.game_play_fxml.ai_fxml.AIScreenController">
+   <children>
+      <Pane fx:id="gamePane" onMouseMoved="#showToolBar" prefHeight="407.0" prefWidth="446.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <VBox alignment="CENTER" layoutX="836.0" layoutY="50.0" spacing="5.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <children>
+             <Label id="scoreLabel" fx:id="scoreLabel" alignment="CENTER" layoutX="836.0" layoutY="50.0" prefHeight="55.0" prefWidth="214.0" stylesheets="@../css/label.css" text="SCORE:" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+            <StackPane fx:id="inputIndicator" prefHeight="84.0" prefWidth="176.0">
+               <children>
+                  <Circle fx:id="inputOff" radius="30.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeWidth="5.0" StackPane.alignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.3777777777777778" centerY="0.4238095238095238" focusDistance="0.11627906976744184" radius="0.33720930232558144">
+                           <stops>
+                              <Stop color="#ae9191" />
+                              <Stop color="#250000" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#d35913" />
+                              <Stop color="#d35913" offset="0.007662835249042145" />
+                              <Stop color="#3c3a3a" offset="0.007662835249042145" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Circle>
+                  <Circle fx:id="inputOn" radius="30.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeWidth="5.0">
+                     <fill>
+                        <RadialGradient centerX="0.4055555555555556" centerY="0.4428571428571429" focusDistance="0.11627906976744184" radius="0.33720930232558144">
+                           <stops>
+                              <Stop color="#ff3535" />
+                              <Stop color="#ff3535" offset="0.007662835249042145" />
+                              <Stop color="#860000" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                     <stroke>
+                        <RadialGradient centerX="0.36111111111111116" centerY="0.3238095238095238" focusDistance="0.023255813953488413" radius="0.8953488372093023">
+                           <stops>
+                              <Stop color="#d35913" />
+                              <Stop color="#bc1600" offset="0.007662835249042145" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Circle>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+       <VBox fx:id="gameOverVBox" alignment="CENTER" layoutX="284.0" layoutY="83.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="268.0" fitWidth="442.0" layoutX="274.0" layoutY="73.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/GameOverLabel.png" />
+               </image>
+            </ImageView>
+            <Label id="endScoreLabel" fx:id="endScoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="437.0" stylesheets="@../css/label.css" text="SCORE:" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Capture it" size="59.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#e49101" />
+                        <Stop color="#e2eb3d" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <StackPane>
+               <children>
+                  <Button fx:id="restartButton" mnemonicParsing="false" prefHeight="73.0" prefWidth="161.0" stylesheets="@../css/button.css" text="RESTART" textAlignment="CENTER" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <VBox fx:id="optionPanel" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#keyPressed" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" opacity="0.8" prefHeight="407.0" prefWidth="104.0" spacing="20.0" style="-fx-background-color: #383838;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Slider fx:id="fpsSlider" max="100.0" min="1.0" orientation="VERTICAL" />
+            <AnchorPane />
+            <Button fx:id="backButton" layoutX="14.0" layoutY="54.0" mnemonicParsing="false" onMouseEntered="#buttonMouseEntered" onMouseExited="#buttonMouseExited" text="Back" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

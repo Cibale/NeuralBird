@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="pane" prefHeight="768.0" prefWidth="1366.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="start.MainMenuController">
+   <children>
+      <VBox fx:id="menuVBox" alignment="CENTER" layoutX="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="326.0" stylesheets="@css/button.css" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="200.0" StackPane.alignment="CENTER_LEFT">
+         <StackPane.margin>
+            <Insets left="75.0" top="20.0" />
+         </StackPane.margin>
+         <children>
+            <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <Button fx:id="playButton" mnemonicParsing="false" onAction="#runGamePlayer" onMouseEntered="#playMouseEntered" onMouseExited="#playMouseExited" prefHeight="73.0" prefWidth="346.0" text="PLAY" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Button>
+            <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <Button fx:id="playAIButton" mnemonicParsing="false" onAction="#runGameAI" onMouseEntered="#playAIMouseEntered" onMouseExited="#playAIMouseExited" prefHeight="73.0" prefWidth="370.0" text="PLAY AI" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Button>
+            <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#openSettings" onMouseEntered="#settingsMouseEntered" onMouseExited="#settingsMouseExited" prefHeight="73.0" prefWidth="351.0" text="SETTINGS" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Button>
+            <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <Button fx:id="creditsButton" mnemonicParsing="false" onAction="#openCredits" onMouseEntered="#creditsMouseEntered" onMouseExited="#creditsMouseExited" prefHeight="73.0" prefWidth="351.0" text="CREDITS" textAlignment="CENTER">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Button>
+            <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <Button fx:id="quitButton" mnemonicParsing="false" onAction="#quitGame" onMouseEntered="#quitMouseEntered" onMouseExited="#quitMouseExited" prefHeight="73.0" prefWidth="371.0" text="QUIT" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Button>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox fx:id="creditsVBox" alignment="CENTER" layoutX="51.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="552.0" stylesheets="@css/label.css" AnchorPane.topAnchor="200.0">
+         <children>
+            <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="529.0" text="PROJECT MENTOR: doc.dr.sc. Marko Čupić" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="529.0" text="PROJECT LEADER: Martin Matak" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="529.0" text="TEAM:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="529.0" text="Martin Matak" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="529.0" text="Damir Kopljar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="529.0" text="Jure Čular" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="529.0" text="Domagoj Latečki" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="673.0" text="Boris Generalić" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+            <AnchorPane>
+               <children>
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#backToMainMenu" prefHeight="73.0" prefWidth="148.0" stylesheets="@css/button.css" text="BACK TO MAIN MENU" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="start.game_play_fxml.player_fxml.PlayerScreenController">
+   <children>
+      <Pane fx:id="gamePane" onMouseMoved="#showToolBar" prefHeight="407.0" prefWidth="446.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label id="scoreLabel" fx:id="scoreLabel" alignment="CENTER" layoutX="836.0" layoutY="50.0" prefHeight="55.0" prefWidth="214.0" stylesheets="@../css/label.css" text="Label" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+      <VBox fx:id="gameOverVBox" alignment="CENTER" layoutX="284.0" layoutY="83.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="268.0" fitWidth="442.0" layoutX="274.0" layoutY="73.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/GameOverLabel.png" />
+               </image>
+            </ImageView>
+            <Label id="endScoreLabel" fx:id="endScoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="437.0" stylesheets="@../css/label.css" text="SCORE:" textAlignment="CENTER" textFill="#3c0d0d" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Capture it" size="59.0" />
+               </font>
+            </Label>
+            <StackPane>
+               <children>
+                  <Button fx:id="restartButton" mnemonicParsing="false" prefHeight="73.0" prefWidth="161.0" stylesheets="@../css/button.css" text="RESTART" textAlignment="CENTER" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <VBox fx:id="optionPanel" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#keyPressed" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" opacity="0.8" prefHeight="407.0" prefWidth="104.0" spacing="20.0" style="-fx-background-color: #383838;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="backButton" layoutX="14.0" layoutY="54.0" mnemonicParsing="false" onMouseEntered="#buttonMouseEntered" onMouseExited="#buttonMouseExited" text="Back" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Tw Cen MT Condensed;
+    src: url("/start/fonts/TwCenMTCondensed.TTF");
+}
+
+.label {
+    -fx-font-family: "Tw Cen MT Condensed";
+    -fx-font-weight: 300;
+    -fx-font-size: 45;
+    -fx-opacity: 0.5;
+
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to right, rgba(117,117,117,1) 0%, rgba(0,0,0,1) 47%, rgba(117,117,117,1) 100%);
+}
+
+.label:hover{
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-text-fill: white;
+    -fx-background-color:
+            linear-gradient(to right, rgba(229,55,111,1) 0%, rgba(56,56,56,1) 50%, rgba(229,55,111,1) 100%);
+}
+
+.label:pressed{
+    -fx-background-color: #e5376f;
+}
